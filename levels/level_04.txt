@@ -1,0 +1,12 @@
+# Niveau texte editable sans JSON
+name: Niveau 4 - Format TXT
+
+spike|220
+cube|200
+portal_low|170
+spike,mini_spike|180
+cube,spike|190
+portal_high|170
+long_spike|210
+portal_normal|170
+mini_spike,spike|150

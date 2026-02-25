@@ -1,0 +1,21 @@
+{
+  "name": "Niveau 1 - Decouverte",
+  "patterns": [
+    {"items": ["spike"], "spacing": 280},
+    {"items": ["cube"], "spacing": 260},
+    {"items": ["portal_low"], "spacing": 190},
+    {"items": ["spike"], "spacing": 260},
+    {"items": ["cube"], "spacing": 260},
+    {"items": ["mini_spike"], "spacing": 170},
+    {"items": ["spike", "mini_spike"], "spacing": 190},
+    {"items": ["cube", "spike"], "spacing": 220},
+    {"items": ["portal_normal"], "spacing": 190},
+    {"items": ["long_spike"], "spacing": 260},
+    {"items": ["cube"], "spacing": 220},
+    {"items": ["spike"], "spacing": 220},
+    {"items": ["portal_high"], "spacing": 180},
+    {"items": ["mini_spike", "spike"], "spacing": 190},
+    {"items": ["cube"], "spacing": 200},
+    {"items": ["long_spike"], "spacing": 260}
+  ]
+}

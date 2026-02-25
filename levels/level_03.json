@@ -1,0 +1,27 @@
+{
+  "name": "Niveau 3 - Pression",
+  "patterns": [
+    {"items": ["mini_spike", "spike"], "spacing": 130},
+    {"items": ["cube"], "spacing": 140},
+    {"items": ["portal_high"], "spacing": 150},
+    {"items": ["spike", "mini_spike", "spike"], "spacing": 120},
+    {"items": ["cube", "cube"], "spacing": 120},
+    {"items": ["portal_low"], "spacing": 140},
+    {"items": ["long_spike"], "spacing": 170},
+    {"items": ["cube", "spike"], "spacing": 120},
+    {"items": ["portal_normal"], "spacing": 130},
+    {"items": ["mini_spike", "mini_spike", "spike"], "spacing": 110},
+    {"items": ["cube"], "spacing": 130},
+    {"items": ["portal_high"], "spacing": 140},
+    {"items": ["long_spike"], "spacing": 150},
+    {"items": ["spike", "cube", "mini_spike"], "spacing": 110},
+    {"items": ["portal_low"], "spacing": 130},
+    {"items": ["long_spike"], "spacing": 160},
+    {"items": ["cube", "spike"], "spacing": 110},
+    {"items": ["portal_normal"], "spacing": 130},
+    {"items": ["mini_spike", "spike"], "spacing": 120},
+    {"items": ["long_spike"], "spacing": 160},
+    {"items": ["cube"], "spacing": 130},
+    {"items": ["spike", "spike"], "spacing": 130}
+  ]
+}

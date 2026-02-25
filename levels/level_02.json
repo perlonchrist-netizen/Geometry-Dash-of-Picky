@@ -1,0 +1,25 @@
+{
+  "name": "Niveau 2 - Cadence",
+  "patterns": [
+    {"items": ["spike"], "spacing": 220},
+    {"items": ["cube"], "spacing": 210},
+    {"items": ["mini_spike", "mini_spike"], "spacing": 160},
+    {"items": ["portal_low"], "spacing": 170},
+    {"items": ["cube", "spike"], "spacing": 170},
+    {"items": ["long_spike"], "spacing": 220},
+    {"items": ["cube"], "spacing": 180},
+    {"items": ["portal_high"], "spacing": 170},
+    {"items": ["spike", "mini_spike"], "spacing": 150},
+    {"items": ["cube", "spike"], "spacing": 180},
+    {"items": ["portal_normal"], "spacing": 170},
+    {"items": ["long_spike"], "spacing": 200},
+    {"items": ["cube"], "spacing": 180},
+    {"items": ["spike", "cube"], "spacing": 150},
+    {"items": ["mini_spike"], "spacing": 140},
+    {"items": ["portal_low"], "spacing": 150},
+    {"items": ["cube", "mini_spike"], "spacing": 150},
+    {"items": ["long_spike"], "spacing": 190},
+    {"items": ["portal_high"], "spacing": 160},
+    {"items": ["spike"], "spacing": 170}
+  ]
+}

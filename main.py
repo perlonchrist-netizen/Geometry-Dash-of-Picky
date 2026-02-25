@@ -85,6 +85,7 @@ def draw_menu():
     hint_1 = font.render("Gauche/Droite : changer de niveau", True, WHITE)
     hint_2 = font.render("Entree/Espace : lancer", True, WHITE)
     hint_3 = font.render("ECHAP : quitter", True, WHITE)
+    level_name_text = font.render(Level.get_name(selected_level), True, YELLOW)
 
     title_rect = title.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 100))
     subtitle_rect = subtitle.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 40))
@@ -92,10 +93,12 @@ def draw_menu():
     hint_1_rect = hint_1.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 70))
     hint_2_rect = hint_2.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 100))
     hint_3_rect = hint_3.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 130))
+    level_name_rect = level_name_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 45))
 
     screen.blit(title, title_rect)
     screen.blit(subtitle, subtitle_rect)
     screen.blit(level_text, level_rect)
+    screen.blit(level_name_text, level_name_rect)
     screen.blit(hint_1, hint_1_rect)
     screen.blit(hint_2, hint_2_rect)
     screen.blit(hint_3, hint_3_rect)
@@ -154,8 +157,16 @@ while running:
         player.update(gravity, level.obstacles)
         if player.is_on_ground(level.obstacles) and abs(player.velocity_y) < 0.1:
             dust_timer += 1
-            if dust_timer >= 6:
-                level.create_dust_particles(player.x + player.size // 2, player.y + player.size)
+            dust_interval = 4 if current_gravity_effect == "HIGH GRAVITY" else 6
+            if dust_timer >= dust_interval:
+                dust_intensity = 1.8 if current_gravity_effect == "HIGH GRAVITY" else 1.0
+                dust_color = DARK_PURPLE if current_gravity_effect == "HIGH GRAVITY" else None
+                level.create_dust_particles(
+                    player.x - 6,
+                    player.y + player.size - 2,
+                    color=dust_color,
+                    intensity=dust_intensity,
+                )
                 dust_timer = 0
         else:
             dust_timer = 0
@@ -181,9 +192,12 @@ while running:
                     BASE_JUMP_POWER,
                 )
                 portal.apply_effect()
+                portal_intensity = 1.6 if portal.portal_type == "high" else 1.0
                 level.create_portal_particles(
                     portal.x + portal.width // 2,
                     GROUND_Y - portal.height // 2 - 20,
+                    color=portal.color,
+                    intensity=portal_intensity,
                 )
 
     screen.fill(BG_COLOR)
